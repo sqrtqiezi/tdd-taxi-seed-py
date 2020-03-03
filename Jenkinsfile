@@ -9,7 +9,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "pip install -r ./requirements.txt"
+                sh 'pip install -r ./requirements.txt'
+            }
+        }
+        stage('Style Check') {
+            steps {
+                echo 'Checking'
+                sh 'pylint taxi'
             }
         }
     }
