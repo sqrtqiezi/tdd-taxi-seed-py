@@ -18,5 +18,17 @@ pipeline {
                 sh 'pylint taxi'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'testing'
+                sh 'pytest --cov=taxi tests'
+            }
+        }
+        stage('Run') {
+            steps {
+                echo 'running'
+                sh 'python main.py ./resource/testData.txt'
+            }
+        }
     }
 }
