@@ -15,7 +15,7 @@ pipeline {
         stage('Style Check') {
             steps {
                 echo 'Checking'
-                sh 'pylint taxi'
+                sh 'python -m pylint taxi'
             }
         }
         stage('Test') {
