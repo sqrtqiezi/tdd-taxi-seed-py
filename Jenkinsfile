@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'testing'
-                sh 'pytest --cov=taxi tests'
+                sh 'python -m pytest --cov=taxi tests'
             }
         }
         stage('Run') {
