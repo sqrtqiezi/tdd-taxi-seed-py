@@ -36,13 +36,13 @@
 
 1. 点击`开始考试`。
 2. 下载考题模板并解压，重命名为`tdd-taxi-py`。
-3. `cd tdd-taxi-js`。
+3. `cd tdd-taxi-py`。
 4. `git init`。
 5. `git remote add origin <github自有仓库>`。
 6. `git add .`。
 7. `git commit -m "Initial commit"`。
 8. `git push -u origin master`。
-9. 接着答题，使用`pytest` 和 `pylint app/*.py`验证本地结果。
+9. 接着答题，使用`pytest --cov=taxi tests` 和 `pylint taxi`验证本地结果。
 10. 本地验证无误后，push到远程仓库，并将git地址提交到科举。
 11. 提交之后等待科举出考试结果。
 
