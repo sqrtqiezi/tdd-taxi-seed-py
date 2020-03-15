@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'testing'
-                sh 'python -m pytest --cov=taxi tests'
+                sh 'python -m pytest --cov-branch --cov=taxi tests/ --cov-report xml:coverage.xml'
             }
         }
         stage('Run') {
