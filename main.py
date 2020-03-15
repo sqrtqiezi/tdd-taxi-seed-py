@@ -5,7 +5,7 @@ TODO
 3. 将所有计费结果拼接并使用\n分割，然后保存到receipt变量中。
 """
 import argparse
-from taxi import your_function
+from taxi import process_file
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -16,5 +16,5 @@ if __name__ == "__main__":
                         help="test data path")
     args = parser.parse_args()
     test_data_file = args.test_data
-    receipt = your_function(test_data_file)
+    receipt = process_file(test_data_file)
     print(receipt)
