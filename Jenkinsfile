@@ -27,7 +27,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'running'
-                sh 'python main.py --test-data=./resource/testData.txt'
+                sh 'python main.py --test-data=./resource/testData2.txt'
             }
         }
     }
