@@ -26,8 +26,14 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo 'running'
-                sh 'python main.py --test-data=./resource/testData2.txt'
+                sh 'python main.py --test-data=./resource/testData2.txt > temp'
+                script {
+                    String diff = sh(returnStdout: true, script: "diff temp resource/answer.txt")
+                    if (diff != "") {
+                        echo diff
+                        error("The answer is incorrect!")
+                    }
+                }
             }
         }
     }
