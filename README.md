@@ -43,7 +43,8 @@
 6. `git add .`。
 7. `git commit -m "Initial commit"`。
 8. `git push -u origin master`。
-9. 接着答题，使用`python -m pytest --cov=taxi tests` 和 `python -m pylint taxi`验证本地结果。
+9. 接着答题，使用`python -m pytest --cov=taxi tests  --cov-branch --cov-fail-under=100` 
+   和 `python -m pylint taxi`验证本地结果。
 10. 本地验证无误后，push到远程仓库，并将git地址提交到科举。
 11. 提交之后等待科举出考试结果。
 
