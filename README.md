@@ -33,21 +33,18 @@
 收费13元\n
 收费7元\n
 ```
+
 ### 开始考试
 
-1. 点击`开始考试`。
-2. 下载考题模板并解压，重命名为`tdd-taxi-py`。
-3. `cd tdd-taxi-py`。
-4. `git init`。
-5. `git remote add origin <github自有仓库>`。
-6. `git add .`。
-7. `git commit -m "Initial commit"`。
-8. `git push -u origin master`。
-9. 接着答题，使用 `python -m pytest --cov=taxi tests --cov-branch --cov-fail-under=100` 和 `python -m pylint taxi`验证本地结果。
+1. 点击开始评测
+2. 点击"复制考题Repo"
+3. 在本地 git clone <题目Repo>
+4. 下载题目模板并解压到第3步的文件夹内
+5. 接着答题，使用 `python -m pytest --cov=taxi tests --cov-branch --cov-fail-under=100` 和 `python -m pylint taxi`验证本地结果。
     * `pylint` 与 `pytest` 工具需要安装第三方依赖，使用命令 `pip install -r requirements.txt` 进行安装
-    * 考试题目基于 python3，请根据自己环境更改上述所有 python 实际命令
-10. 本地验证无误后，push到远程仓库，并将git地址提交到科举。
-11. 提交之后等待科举出考试结果。
+    * 考试题目基于 python3，请根据自己环境更改上述所有 python 实际命令 6. 本地验证无误后，push到远程仓库
+7. 在科举点击“评测提交”按钮
+8. 等待科举出评测结果
 
 ### 考试通过的标准
 
